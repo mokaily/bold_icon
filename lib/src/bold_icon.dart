@@ -50,21 +50,21 @@ import 'package:flutter/material.dart';
 class BoldIcon extends StatelessWidget {
   /// Creates an icon.
   const BoldIcon(
-      this.icon, {
-        super.key,
-        this.size,
-        this.fill,
-        this.weight,
-        this.grade,
-        this.opticalSize,
-        this.color,
-        this.shadows,
-        this.semanticLabel,
-        this.textDirection,
-        this.applyTextScaling,
-        this.blendMode,
-        this.fontWeight,
-      }) : assert(fill == null || (0.0 <= fill && fill <= 1.0)),
+    this.icon, {
+    super.key,
+    this.size,
+    this.fill,
+    this.weight,
+    this.grade,
+    this.opticalSize,
+    this.color,
+    this.shadows,
+    this.semanticLabel,
+    this.textDirection,
+    this.applyTextScaling,
+    this.blendMode,
+    this.fontWeight,
+  })  : assert(fill == null || (0.0 <= fill && fill <= 1.0)),
         assert(weight == null || (0.0 < weight)),
         assert(opticalSize == null || (0.0 < opticalSize));
 
@@ -266,16 +266,17 @@ class BoldIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     assert(this.textDirection != null || debugCheckHasDirectionality(context));
-    final TextDirection textDirection = this.textDirection ?? Directionality.of(context);
+    final TextDirection textDirection =
+        this.textDirection ?? Directionality.of(context);
 
     final IconThemeData iconTheme = IconTheme.of(context);
 
-    final bool applyTextScaling = this.applyTextScaling ?? iconTheme.applyTextScaling ?? false;
+    final bool applyTextScaling =
+        this.applyTextScaling ?? iconTheme.applyTextScaling ?? false;
 
     final double tentativeIconSize = size ?? iconTheme.size ?? kDefaultFontSize;
 
-    final double iconSize =
-    applyTextScaling
+    final double iconSize = applyTextScaling
         ? MediaQuery.textScalerOf(context).scale(tentativeIconSize)
         : tentativeIconSize;
 
@@ -291,7 +292,9 @@ class BoldIcon extends StatelessWidget {
 
     final IconData? icon = this.icon;
     if (icon == null) {
-      return Semantics(label: semanticLabel, child: SizedBox(width: iconSize, height: iconSize));
+      return Semantics(
+          label: semanticLabel,
+          child: SizedBox(width: iconSize, height: iconSize));
     }
 
     final double iconOpacity = iconTheme.opacity ?? 1.0;
@@ -301,8 +304,7 @@ class BoldIcon extends StatelessWidget {
       iconColor = iconColor.withValues(alpha: iconColor.a * iconOpacity);
     }
     if (blendMode != null) {
-      foreground =
-      Paint()
+      foreground = Paint()
         ..blendMode = blendMode!
         ..color = iconColor;
       // Cannot provide both a color and a foreground.
@@ -324,7 +326,7 @@ class BoldIcon extends StatelessWidget {
       fontFamilyFallback: icon.fontFamilyFallback,
       shadows: iconShadows,
       height:
-      1.0, // Makes sure the font's body is vertically centered within the iconSize x iconSize square.
+          1.0, // Makes sure the font's body is vertically centered within the iconSize x iconSize square.
       leadingDistribution: TextLeadingDistribution.even,
       foreground: foreground,
       fontWeight: fontWeight ?? FontWeight.bold,
@@ -332,8 +334,10 @@ class BoldIcon extends StatelessWidget {
 
     Widget iconWidget = RichText(
       overflow: TextOverflow.visible, // Never clip.
-      textDirection: textDirection, // Since we already fetched it for the assert...
-      text: TextSpan(text: String.fromCharCode(icon.codePoint), style: fontStyle),
+      textDirection:
+          textDirection, // Since we already fetched it for the assert...
+      text:
+          TextSpan(text: String.fromCharCode(icon.codePoint), style: fontStyle),
     );
 
     if (icon.matchTextDirection) {
@@ -353,7 +357,10 @@ class BoldIcon extends StatelessWidget {
     return Semantics(
       label: semanticLabel,
       child: ExcludeSemantics(
-        child: SizedBox(width: iconSize, height: iconSize, child: Center(child: iconWidget)),
+        child: SizedBox(
+            width: iconSize,
+            height: iconSize,
+            child: Center(child: iconWidget)),
       ),
     );
   }
@@ -361,18 +368,24 @@ class BoldIcon extends StatelessWidget {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(IconDataProperty('icon', icon, ifNull: '<empty>', showName: false));
+    properties.add(
+        IconDataProperty('icon', icon, ifNull: '<empty>', showName: false));
     properties.add(DoubleProperty('size', size, defaultValue: null));
     properties.add(DoubleProperty('fill', fill, defaultValue: null));
     properties.add(DoubleProperty('weight', weight, defaultValue: null));
     properties.add(DoubleProperty('grade', grade, defaultValue: null));
-    properties.add(DoubleProperty('opticalSize', opticalSize, defaultValue: null));
+    properties
+        .add(DoubleProperty('opticalSize', opticalSize, defaultValue: null));
     properties.add(ColorProperty('color', color, defaultValue: null));
-    properties.add(IterableProperty<Shadow>('shadows', shadows, defaultValue: null));
-    properties.add(StringProperty('semanticLabel', semanticLabel, defaultValue: null));
-    properties.add(EnumProperty<TextDirection>('textDirection', textDirection, defaultValue: null));
+    properties
+        .add(IterableProperty<Shadow>('shadows', shadows, defaultValue: null));
     properties.add(
-      DiagnosticsProperty<bool>('applyTextScaling', applyTextScaling, defaultValue: null),
+        StringProperty('semanticLabel', semanticLabel, defaultValue: null));
+    properties.add(EnumProperty<TextDirection>('textDirection', textDirection,
+        defaultValue: null));
+    properties.add(
+      DiagnosticsProperty<bool>('applyTextScaling', applyTextScaling,
+          defaultValue: null),
     );
   }
 }
