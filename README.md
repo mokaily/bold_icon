@@ -8,6 +8,10 @@ or simply have a stronger visual presence, **BoldifyIcon** makes it easy.
 
 ---
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mokaily/boldify_icon/main/example/images/img.png" width="600"/>
+</p>
+
 ## ✨ Key Feature
 
 - **`fontWeight`** – Set a heavier font weight to make the icon look bold.  
@@ -59,12 +63,6 @@ all icons render at the font’s default stroke thickness.
 - **Match icons with bold text** for visual harmony in your UI.
 - **Increase icon visibility** for better accessibility and emphasis.
 - **Create a stronger, bolder look** without replacing assets or using custom icon sets.
-
-
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mokaily/boldify_icon/main/example/images/img.png" width="600"/>
-</p>
 
 
 ## Donations
