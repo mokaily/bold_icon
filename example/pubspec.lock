@@ -9,13 +9,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.13.0"
-  bold_icon:
+  boldify_icon:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "1.0.0+1"
+    version: "1.0.0"
   boolean_selector:
     dependency: transitive
     description:

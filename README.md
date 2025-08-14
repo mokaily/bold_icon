@@ -1,10 +1,10 @@
-# BoldIcon
+# BoldifyIcon
 
-**BoldIcon** is a drop-in replacement for Flutter’s built-in [Icon] widget,  
+**BoldifyIcon** is a drop-in replacement for Flutter’s built-in [Icon] widget,  
 with one key extra feature: **`fontWeight`** — allowing you to make **any font-based icon bold**.
 
 If you’ve ever wanted your icons to match bold text, stand out more in the UI,  
-or simply have a stronger visual presence, **BoldIcon** makes it easy.
+or simply have a stronger visual presence, **BoldifyIcon** makes it easy.
 
 ---
 
@@ -24,12 +24,12 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  bold_icon: 
+  boldify_icon: 
 ```
 
 ## 🔧 Parameters
 
-**BoldIcon** accepts all the same parameters as Flutter’s built-in [`Icon`](https://api.flutter.dev/flutter/widgets/Icon-class.html) widget,  
+**BoldifyIcon** accepts all the same parameters as Flutter’s built-in [`Icon`](https://api.flutter.dev/flutter/widgets/Icon-class.html) widget,  
 **plus the new 🚀 `fontWeight` property** for controlling icon boldness.
 
 | Parameter         | Type              | Description                                                                 |
@@ -49,12 +49,12 @@ dependencies:
 | `applyTextScaling`| `bool?`           | Scale icon with text size.                                                  |
 
 
-## 💡 Why use BoldIcon instead of Icon?
+## 💡 Why use BoldifyIcon instead of Icon?
 
 With Flutter’s default [Icon] widget, **you can’t change the font weight** —  
 all icons render at the font’s default stroke thickness.
 
-**BoldIcon** unlocks that control, letting you:
+**BoldifyIcon** unlocks that control, letting you:
 
 - **Match icons with bold text** for visual harmony in your UI.
 - **Increase icon visibility** for better accessibility and emphasis.
@@ -63,7 +63,7 @@ all icons render at the font’s default stroke thickness.
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mokaily/bold_icon/main/example/images/img.png" width="600"/>
+  <img src="https://raw.githubusercontent.com/mokaily/boldify_icon/main/example/images/img.png" width="600"/>
 </p>
 
 

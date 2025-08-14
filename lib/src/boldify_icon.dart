@@ -32,7 +32,7 @@ import 'package:flutter/material.dart';
 /// For example, to make an icon bold:
 ///
 /// ```dart
-/// const BoldIcon(
+/// const BoldifyIcon(
 ///   Icons.favorite,
 ///   fontWeight: FontWeight.bold,
 ///   color: Colors.red,
@@ -47,9 +47,9 @@ import 'package:flutter/material.dart';
 ///  * [Icons], for the list of available Material Icons for use with this class.
 ///  * [IconTheme], which provides ambient configuration for icons.
 ///  * [ImageIcon], for showing icons from [AssetImage]s or other [ImageProvider]s.
-class BoldIcon extends StatelessWidget {
+class BoldifyIcon extends StatelessWidget {
   /// Creates an icon.
-  const BoldIcon(
+  const BoldifyIcon(
     this.icon, {
     super.key,
     this.size,

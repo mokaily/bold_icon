@@ -3,4 +3,4 @@
 
 library;
 
-export 'src/bold_icon.dart';
+export 'src/boldify_icon.dart';

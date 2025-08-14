@@ -1,8 +1,8 @@
-name: boldicon
+name: boldify_icon
 description: "Drop-in Flutter Icon widget with fontWeight support — make any icon bold."
 version: 1.0.0
 homepage: https://www.mokaily.com/
-repository: https://github.com/mokaily/bold_icon
+repository: https://github.com/mokaily/boldify_icon
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
