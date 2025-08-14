@@ -62,7 +62,9 @@ all icons render at the font’s default stroke thickness.
 
 
 
-<p align="center"><img src="https://github.com/mokaily/bold_icon/blob/main/example/images/img.png?raw=true" width="600"/></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mokaily/bold_icon/main/example/images/img.png" width="600"/>
+</p>
 
 
 ## Donations
